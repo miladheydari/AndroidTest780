@@ -1,7 +1,7 @@
 # Test Application for *780#
 
 ## Outputs
-![img 1](screenshot/shreenshot-1.png) 
+![img 1](screenshot/screenshot-1.png) 
 ![img 2](screenshot/screenshot-2.png) 
 
 ## Libraries and tools 🛠
