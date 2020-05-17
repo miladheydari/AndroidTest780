@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/CommoditiesFragment">
+    <fragment
+        android:id="@+id/CommoditiesFragment"
+        android:name="com.miladheydari.interview.s780androidtest.ui.commodities.CommoditiesFragment"
+        android:label="fragment_commodities"
+        tools:layout="@layout/fragment_commodities">
+        <action
+            android:id="@+id/action_commoditiesFragment_to_categoriesFragment2"
+            app:destination="@id/categoriesFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fragment_close_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.miladheydari.interview.s780androidtest.ui.categories.CategoriesFragment"
+        android:label="fragment_categories"
+        tools:layout="@layout/fragment_categories">
+        <argument
+            android:name="commodityId"
+            app:argType="long" />
+        <argument
+            android:name="commodityName"
+            app:argType="string" />
+        <argument
+            android:name="commodityColor"
+            app:argType="string" />
+
+
+    </fragment>
+</navigation>

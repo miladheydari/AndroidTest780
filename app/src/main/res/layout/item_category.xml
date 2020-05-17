@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.miladheydari.interview.s780androidtest.ui.categories.CategoryResultViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rootItemView"
+        style="@style/AppTheme.Clickable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:setBackgroundColor="@{viewModel.item.color}">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvName"
+            style="@style/MyAppTextAppearance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="4dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@{viewModel.item.title ?? @string/string_null}"
+            android:textColor="@color/black"
+            android:textDirection="locale"
+            android:textSize="@dimen/Medium"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/guidelineBottom"
+
+
+            app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+            app:layout_constraintTop_toBottomOf="@id/guidelineTop"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Name" />
+
+        <View
+            android:id="@+id/viewDivider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/colorDividerDark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="8dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="8dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

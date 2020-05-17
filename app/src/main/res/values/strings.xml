@@ -1,0 +1,9 @@
+<resources>
+    <string name="position">position</string>
+
+    <string name="app_name">780 Android Test</string>
+
+    <string name="string_null">-</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="category">change category</string>
+</resources>
